@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+//import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { VscQuestion } from 'react-icons/vsc';
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { AiOutlineFile } from "react-icons/ai";
@@ -33,9 +33,9 @@ function CurriculumSection({idx, sectionData, is_all_expanded}) {
                 <span className="section-header-title" onClick={() => set_is_expanded(!is_expanded)}>
                     {
                         is_expanded ?
-                        <FontAwesomeIcon Icon={solid('angle-up')}/>
+                        <FontAwesomeIcon Icon={('angle-up')}/>
                         :
-                        <FontAwesomeIcon Icon={solid('angle-down')} />
+                        <FontAwesomeIcon Icon={('angle-down')} />
                     }
                     {sectionData.title}
                 </span>
@@ -65,23 +65,23 @@ export default function CourseContent({courseData}) {
 
     const [show_more, set_show_more] = React.useState(false);
     const [is_all_expanded, set_is_all_expanded] = React.useState(false);
-
+    const sectionsData = courseData.lectures;
     return (
         <div className="course-content" id='Curriculum'>
             <p className="course-content-header" > Course content</p>
             <div className="details">
                 <p>{courseData.totallength}</p>
-                <button className="expanded_button" onClick={() => set_is_expanded(!is_all_expanded)}>
+                <button className="expanded_button" onClick={() => set_is_all_expanded(!is_all_expanded)}>
                     { is_all_expanded ? 'Collapse all sections' : 'Expand all sections'}
                 </button>
             </div>
-            {sectionData.map((e, idx) => ((show_more || idx < MaxShowSection) ? <CurriculumSection key={idx} sectionData={e} is_all_expanded={is_all_expanded} /> : <div key={idx}></div>))}
+            {sectionsData.map((e, idx) => ((show_more || idx < MaxShowSection) ? <CurriculumSection key={idx} sectionData={e} is_all_expanded={is_all_expanded} /> : <div key={idx}></div>))}
             <div className="show-more-less-btn" onClick={() => set_show_more(!show_more)}>
                 {
                     show_more ?
-                    <span>Show less sections <FontAwesomeIcon Icon={solid('angle-up')} /></span>
+                    <span>Show less sections <FontAwesomeIcon Icon={('angle-up')} /></span>
                     :
-                    <span>Show more sections <FontAwesomeIcon Icon={solid('angle-down')} /></span>
+                    <span>Show more sections <FontAwesomeIcon Icon={('angle-down')} /></span>
                 }
             </div>
         </div>

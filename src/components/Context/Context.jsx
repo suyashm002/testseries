@@ -53,7 +53,7 @@ export const Provider = (props) => {
             setCoursesList(res.data)
         });
 
-        fetch("")
+        fetch("https://api.npoint.io/5d666b620e2b069620a2")
         .then((res) => res.json())
         .then((res) => {
             setTopCategories(res);
@@ -62,7 +62,7 @@ export const Provider = (props) => {
     }, []);
 
     const queryCourse = (courseTab, courseId) => {
-        if(courseList === undefined) {
+        if(coursesList === undefined) {
             fetch("")
             .then((res) => res.json())
             .then((res) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+//import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Stars from '../../HomePage/Section/CourseSection/CourseCard/Stars';
 import { HiOutlineThumbUp, HiOutlineThumbDown} from 'react-icons/hi';
 import './Reviews.css';
@@ -17,7 +17,7 @@ function adjustInitial(name, init) {
     return init;
 }
 
-function Review({review}) {
+function Review({reviewer}) {
     return (
         <div className="review_card">
             <div className="user-review">
@@ -59,10 +59,10 @@ export default function Reviews({courseData}) {
             <div className="show-more-less-btn" onClick={() => set_show_more(!show_more)}>
                 {
                     show_more ?
-                    <span>Show less comments <FontAwesomeIcon icon={solid('angle-up')}/></span>
+                    <span>Show less comments <FontAwesomeIcon icon={('angle-up')}/></span>
                     :
-                    <span>Show more comments <FontAwesomeIcon icon={solid('angle-down')}/></span>
-                    
+                    <span>Show more comments <FontAwesomeIcon icon={('angle-down')}/></span>
+
                 }
             </div>
         </div>

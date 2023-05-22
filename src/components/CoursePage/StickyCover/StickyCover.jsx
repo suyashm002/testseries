@@ -1,5 +1,5 @@
 import React from 'react'
-import Badge from '../../HomePage/Section/CoursesSection/Badge'
+//import Badge from '../../HomePage/Section/CoursesSection/Badge'
 import { MdStar } from "react-icons/md";
 import './StickyCover.css'
 
@@ -11,7 +11,7 @@ export default function StickyCover({courseData}) {
                 <div className="sticky_cover_left">
                     <p className='title_cover'>{courseData.title}</p>
                     <div className='_rating_cover'>
-                        {courseData.bestseller ? <Badge badge_text={'Bestseller'}/> : null}
+                        {courseData.bestseller = null}
                         <div className='_rate_cover'>
                             <span className='rate_number_cover'>{courseData.rating.toPrecision(2)}</span>
                             <MdStar/>

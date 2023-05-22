@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Stars from '../../HomePage/Section/CourseSection/CourseCard/Stars';
-import Badge from '../../HomePage/Section/CourseSection/Badge';
+//import Badge from '../../HomePage/Section/CourseSection/Badge';
 import StickyCover from '../StickyCover';
 import { MdNewReleases, MdLanguage, MdClosedCaption } from 'react-icons/md';
 import { Context } from '../../Context';

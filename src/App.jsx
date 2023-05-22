@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Fragment } from 'react';
-import Header from './components/Layout/Header';
-import { Provider } from './components/Context';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import RoutesPages from './Routes/Routes';
+import { Provider } from './components/Context';
 
 export default function App() {
   return (

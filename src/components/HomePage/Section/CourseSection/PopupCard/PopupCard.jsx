@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ObjComp from './ObjComp';
 import Date from './Date';
-import Badge from '../Badge';
+//import Badge from '../Badge';
 import { Context } from '../../../../Context';
 
 export default function PopupCard({course}){
@@ -13,7 +13,7 @@ export default function PopupCard({course}){
         <div className="course_card_hover">
             <a href={`/Udemy-Website/course_info/${currTab}/${course.id}`} className="course_card_title">{course.title}</a>
             <div className='seller_info'>
-                {course.bestseller ? <Badge badge_text={'Bestseller'}/> : <></>}
+                {course.bestseller = null }
                 <Date date={course.lastupdated}/>
             </div>
             <p className='grey_p'>{totalHours} total hours . Beginner Level . Subtitle</p>

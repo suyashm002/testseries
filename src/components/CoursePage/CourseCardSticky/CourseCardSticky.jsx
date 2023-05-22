@@ -29,7 +29,7 @@ function LineDesc({icon, text}) {
     );
 }
 
-function stickyItem({courseData, isCardAppear}) {
+function StickyItem({courseData, isCardAppear}) {
 
     const { currTab } = useContext(Context);
 
@@ -43,7 +43,7 @@ function stickyItem({courseData, isCardAppear}) {
                 </div>
                 <div className={isCardAppear ? 'child' : 'child sticky_sidebar'}>
                     <div className='price'>
-                        <p><E1>courseData.price</E1> </p>
+                        <p>E£{courseData.price} </p>
                         {courseData.discount_percentage ? <s className='__discount'>{courseData.oldprice}</s> : null}
                         {courseData.discount_percentage ? <span className='discount_per'>{courseData.discount_percentage}% off</span> : null}
                     </div>
@@ -90,7 +90,7 @@ export default function CourseCardSticky({courseData, isCardAppear, InBack}) {
 
     return (
         <Sticky bottomBoundary={YLimit} top={100} innerZ={InBack ? 1 : 10} enabled={!isCardAppear} enableTransforms={true}>
-            <stickyItem courseData={courseData} isCardAppear={isCardAppear}/>
+            <StickyItem courseData={courseData} isCardAppear={isCardAppear}/>
         </Sticky>
     );
 }
